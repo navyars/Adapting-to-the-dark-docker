@@ -1,5 +1,3 @@
-FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu18.04
-
 # 1) choose base container
 # generally use the most recent tag
 
@@ -20,6 +18,8 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 # 2) change to root to install packages
 USER root
+
+FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu18.04
 
 RUN apt-get -y install htop
 
