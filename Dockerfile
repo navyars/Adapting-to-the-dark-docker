@@ -1,4 +1,4 @@
-# FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu18.04
+FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu18.04
 
 # 1) choose base container
 # generally use the most recent tag
