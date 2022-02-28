@@ -26,7 +26,7 @@ RUN apt-get -y install htop
 # 3) install packages using notebook user
 USER jovyan
 
-RUN conda install -y cudatoolkit=10.1 cudnn nccl
+RUN conda install -y cudatoolkit=11.0 cudnn nccl
 # RUN conda install -y scikit-learn
 
 RUN pip install --no-cache-dir networkx scipy rawpy tensorflow
