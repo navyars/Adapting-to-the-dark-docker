@@ -24,7 +24,7 @@ USER root
 
 # FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu18.04
 
-RUN apt-get -y install htop
+# RUN apt-get -y install htop
 
 # 3) install packages using notebook user
 # USER jovyan
