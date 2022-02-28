@@ -31,7 +31,7 @@ USER root
 
 # RUN conda install -y cudatoolkit=11.0 cudnn nccl
 # RUN conda install -y scikit-learn
-RUN apt-get update && apt-get install -y python-pip
+RUN apt-get update && apt-get install -y python3-pip
 RUN pip install rawpy tensorflow
 
 # Override command to disable running jupyter notebook at launch
