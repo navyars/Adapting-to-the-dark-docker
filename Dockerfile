@@ -2,7 +2,10 @@
 # generally use the most recent tag
 
 # base notebook, contains Jupyter and relevant tools
-ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
+# ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
+
+ARG BASE_CONTAINER=nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu20.04
+
 
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
@@ -24,12 +27,12 @@ USER root
 RUN apt-get -y install htop
 
 # 3) install packages using notebook user
-USER jovyan
+# USER jovyan
 
-RUN conda install -y cudatoolkit=11.0 cudnn nccl
+# RUN conda install -y cudatoolkit=11.0 cudnn nccl
 # RUN conda install -y scikit-learn
-
-RUN pip install --no-cache-dir networkx scipy rawpy tensorflow
+RUN apt-get update && apt-get install -y python-pip
+RUN pip install rawpy tensorflow
 
 # Override command to disable running jupyter notebook at launch
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
