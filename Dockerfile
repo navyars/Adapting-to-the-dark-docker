@@ -2,7 +2,7 @@
 # generally use the most recent tag
 
 # base notebook, contains Jupyter and relevant tools
-ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
+# ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
 
 # ARG BASE_CONTAINER=nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu20.04
 
@@ -13,7 +13,7 @@ ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
 
 # scipy/machine learning (tensorflow, pytorch)
 # https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
-# ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2021.3-42158c8
+ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2021.3-42158c8
 
 FROM $BASE_CONTAINER
 
