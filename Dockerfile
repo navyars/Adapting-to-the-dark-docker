@@ -27,7 +27,7 @@ USER root
 RUN apt-get -y install htop
 
 # 3) install packages using notebook user
-USER jovyan
+USER nshetty
 
 # RUN conda install -y cudatoolkit=11.0.3 cudnn nccl
 # RUN conda install -y rawpy tensorflow
@@ -35,7 +35,7 @@ USER jovyan
 # RUN conda install -c appfanu rawpy
 
 # RUN apt-get update && apt-get install -y python3-pip
-# RUN pip install rawpy
+RUN pip install rawpy
 
 # Override command to disable running jupyter notebook at launch
 CMD ["/bin/bash"]
