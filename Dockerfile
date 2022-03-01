@@ -27,7 +27,7 @@ USER root
 RUN apt-get -y install htop
 
 # 3) install packages using notebook user
-USER nshetty
+USER jovyan
 
 # RUN conda install -y cudatoolkit=11.0.3 cudnn nccl
 # RUN conda install -y rawpy tensorflow
